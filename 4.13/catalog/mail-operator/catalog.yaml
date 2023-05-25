@@ -10,7 +10,7 @@ icon:
 name: mail-operator
 schema: olm.package
 ---
-image: quay.io/lmendes/mail-operator-bundle:v1
+image: quay.io/lmendes/mail-operator-bundle:v0.0.1
 name: mail-operator.v0.0.1
 package: mail-operator
 properties:
@@ -21,9 +21,9 @@ properties:
 relatedImages:
 - image: gcr.io/kubebuilder/kube-rbac-proxy:v0.13.0
   name: ""
-- image: quay.io/lmendes/mail-operator-bundle:v1
+- image: quay.io/lmendes/mail-operator-bundle:v0.0.1
   name: ""
-- image: quay.io/lmendes/mail-operator:v1alpha1
+- image: quay.io/lmendes/mail-operator:v0.0.1
   name: ""
 schema: olm.bundle
 ---

@@ -1,10 +1,13 @@
 # The base image is expected to contain
 # /bin/opm (with a serve subcommand) and /bin/grpc_health_probe
 FROM registry.redhat.io/openshift4/ose-operator-registry:v4.12
-
+USER root
 # Configure the entrypoint and command
 ENTRYPOINT ["/bin/opm"]
 CMD ["serve", "/configs", "--cache-dir=/tmp/cache"]
+
+RUN ["/bin/mkdir", "-p", "/var/lib/iib/_hidden"]
+ADD do.not.edit.db /var/lib/iib/_hidden/do.not.edit.db
 
 # Copy declarative config root into image at /configs
 ADD catalog /configs

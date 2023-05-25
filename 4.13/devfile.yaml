@@ -8,7 +8,7 @@ metadata:
 components:
   - name: image-build
     image:
-      imageName: ""
+      imageName: "go-image:latest"
       dockerfile:
         uri: catalog.Dockerfile
         buildContext: "4.13"
@@ -50,3 +50,10 @@ commands:
   - id: build-image
     apply:
       component: image-build
+  - id: deploy
+    composite:
+        commands:
+            - build-image
+        group:
+            kind: deploy
+            isDefault: true
