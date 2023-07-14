@@ -19,8 +19,6 @@ properties:
     packageName: mail-operator
     version: 0.0.1
 relatedImages:
-- image: gcr.io/kubebuilder/kube-rbac-proxy:v0.13.0
-  name: ""
 - image: quay.io/lmendes/mail-operator-bundle:v0.0.1
   name: ""
 - image: quay.io/lmendes/mail-operator:v0.0.1
