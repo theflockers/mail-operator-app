@@ -131,13 +131,18 @@ image: quay.io/lmendes/mail-operator-bundle:v0.0.1
 name: mail-operator.v0.0.1
 package: mail-operator
 properties:
-- type: olm.package
-  value:
-    packageName: mail-operator
-    version: 0.0.1
+    - type: olm.gvk
+      value:
+          group: lmendes.info
+          kind: App
+          version: v1
+    - type: olm.package
+      value:
+          packageName: mail-operator
+          version: 0.0.1
 relatedImages:
-- image: quay.io/lmendes/mail-operator-bundle:v0.0.1
-  name: ""
-- image: quay.io/lmendes/mail-operator:v0.0.1
-  name: ""
-schema: olm.bundle
+    - image: quay.io/lmendes/mail-operator-bundle:v0.0.1
+      name: ""
+    - image: quay.io/lmendes/mail-operator:v0.0.1
+      name: ""
+      schema: olm.bundle
