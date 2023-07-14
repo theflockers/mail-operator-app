@@ -12,7 +12,7 @@ name: stable
 entries:
   - name: mail-operator.v0.0.1
   - name: mail-operator.v0.0.2
-  - replaces: mail-operator.v0.0.1
+    replaces: mail-operator.v0.0.1
 ---
 schema: olm.bundle
 image: quay.io/lmendes/mail-operator-bundle:v0.0.2
