@@ -10,6 +10,7 @@ schema: olm.channel
 package: mail-operator
 name: stable
 entries:
+  - name: mail-operator.v0.0.1
   - name: mail-operator.v0.0.2
   - replaces: mail-operator.v0.0.1
 ---
